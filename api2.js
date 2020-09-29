@@ -1,10 +1,11 @@
 let baseURL = 'https://api.unsplash.com/photos/random?client_id=CTmQ7YFpK_hnb_wuuecM9Lc0kbqBOSax3E4DhBobxlI'
 
 
-const card = document.querySelector('.card');
+const card = document.querySelector('.container');
 const cardBody = document.querySelector('.card-body');
 const moreInfoBtn = document.querySelector('.btn');
 moreInfoBtn.addEventListener('click', fetchData);
+
 
 function fetchData () {
     fetch(baseURL)
@@ -25,7 +26,6 @@ function displayImage(object) {
     let title = document.createElement('h1');
     title.className = 'card-title';
     title.innerText = object.alt_description;
-    title.style = 'font-family: arial'
 
     let date = document.createElement('p');
     date.className = 'card-text';
