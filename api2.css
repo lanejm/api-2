@@ -1,0 +1,24 @@
+/* General setup*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #C9C9C7;
+    text-align: center;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    float: right;
+    margin-right: 100px;
+}
