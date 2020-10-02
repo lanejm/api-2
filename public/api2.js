@@ -9,7 +9,14 @@ moreInfoBtn.addEventListener('click', fetchData);
 
 function fetchData () {
     fetch(baseURL)
-        .then(response => response.json())
+        .then(response => {
+            console.log(response.status)
+            if(response.status === 403) {
+                alert("You've clicked too many times, try again later");
+            } else {
+            return response.json()
+            }
+        })
         .then(json => displayImage(json));
 
 }
